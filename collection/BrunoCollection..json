@@ -1,0 +1,112 @@
+{
+  "name": "SDA SE Java Challenge",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "Check Document - Fake File - Wrong Magic Byte",
+      "seq": 3,
+      "request": {
+        "url": "http://localhost:8081/check-document",
+        "method": "POST",
+        "headers": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"documentUrl\": \"http://localhost:8082/repository/fake-file.pdf\",\n  \"documentType\": \"pdf\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "none"
+        },
+        "query": []
+      }
+    },
+    {
+      "type": "http",
+      "name": "Check Document - File - Status Ignored",
+      "seq": 2,
+      "request": {
+        "url": "http://localhost:8081/check-document",
+        "method": "POST",
+        "headers": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"documentUrl\": \"http://localhost:8082/repository/thanks.pdf\",\n  \"documentType\": \"pdf\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "none"
+        },
+        "query": []
+      }
+    },
+    {
+      "type": "http",
+      "name": "Check Document - File Ok - Status OK",
+      "seq": 1,
+      "request": {
+        "url": "http://localhost:8081/check-document",
+        "method": "POST",
+        "headers": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"documentUrl\": \"http://localhost:8082/repository/file-ok.pdf\",\n  \"documentType\": \"pdf\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "none"
+        },
+        "query": []
+      }
+    },
+    {
+      "type": "http",
+      "name": "Check Document - IBAN Blocked",
+      "seq": 4,
+      "request": {
+        "url": "http://localhost:8081/check-document",
+        "method": "POST",
+        "headers": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"documentUrl\": \"http://localhost:8082/repository/Testdaten_Rechnungseinreichung.pdf\",\n  \"documentType\": \"pdf\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "none"
+        },
+        "query": []
+      }
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "SDA SE Java Challenge",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ]
+  }
+}

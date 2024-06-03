@@ -1,0 +1,85 @@
+{
+  "info": {
+    "name": "SDA SE Java Challenge",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Check Document - Fake File - Wrong Magic Byte",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "http://localhost:8081/check-document",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"documentUrl\": \"http://localhost:8082/repository/fake-file.pdf\",\n  \"documentType\": \"pdf\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Check Document - File - Status Ignored",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "http://localhost:8081/check-document",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"documentUrl\": \"http://localhost:8082/repository/thanks.pdf\",\n  \"documentType\": \"pdf\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Check Document - File Ok - Status OK",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "http://localhost:8081/check-document",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"documentUrl\": \"http://localhost:8082/repository/file-ok.pdf\",\n  \"documentType\": \"pdf\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Check Document - IBAN Blocked",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "http://localhost:8081/check-document",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"documentUrl\": \"http://localhost:8082/repository/Testdaten_Rechnungseinreichung.pdf\",\n  \"documentType\": \"pdf\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "bruno",
+      "event": []
+    }
+  ],
+  "variable": []
+}
