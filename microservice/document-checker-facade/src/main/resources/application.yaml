@@ -1,0 +1,43 @@
+server:
+  port: 8081
+
+spring:
+  application.name: challengeb
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    topic:
+      check-validation:
+        check-validation
+      check-result:
+        check-result
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring:
+          json:
+            type:
+              mapping: check:com.sda.challenge.facade.challengeb.domain.model.kafka.CheckEvent
+    consumer:
+      group-id: group-1
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            type:
+              mapping: check:com.sda.challenge.facade.challengeb.domain.model.kafka.CheckResultEvent
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    operations-sorter: method
+info:
+  app:
+    name: Your Application Name
+    description: Your Application Description
+    version: 1.0.0

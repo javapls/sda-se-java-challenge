@@ -1,0 +1,13 @@
+package com.sda.challenge.facade.challengeb;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class ChallengebpplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
