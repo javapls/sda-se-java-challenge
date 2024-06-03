@@ -56,3 +56,7 @@ These projects have this Organization:
 
 - #### Controller
   The Controllers will expose our EndPoints, in other interpretations Clean Architecture Controllers are part of adapters, but in Spring Projects, it is common for the controllers to be separated.
+
+### Unit Test
+For unit tests, I used Mockito and JUnit. To organize the test I used the [AAA Pattern](https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80).
+You can check at the <b>pdf-checker</b> microservice.
